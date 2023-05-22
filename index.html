@@ -17,13 +17,10 @@
     <div id="principal">
         <header class="hero">
 
-            <!-- <div class="top-bar">
-                <p id="text">Bem-vindo(a), </p>
-            </div> -->
-
             <div class="hero-content">
                 <h1>Curso Javascript Completo</h1>
-                <p>Aprenda Javascript de verdade</p>
+                <input type="email" name="" id="email">
+                <button id="btn">enviar</button>
             </div>
         </header>
 
@@ -66,23 +63,27 @@
     
     </div>
     <script>
-        (function(){
-            const nome = 'bruna';
-            if(nome){
-                //iserindo uma div/elemento e nomeando com uma classe
-                const topbar = document.createElement('div');
-                topbar.className = 'top-bar';
-                //inseriu uma nova tag de parágrafo que recebeu uma frase
-                topbar.innerHTML = `<p>Olá, ${nome}</p>`;
-                //inserir para dentro do Dom, o elemento criado, pra isso
-                // foi necessário pegar a tag pai do elemento que vaiser inserido, e 
-                // também o elemento referência 
-                const elementoPai = document.querySelector('.hero');
-                elementoPai.insertBefore(topbar, elementoPai.firstElementChild);
+        const btn = document.querySelector('#btn');
+        btn.onclick = ()=>{
+            const email = document.querySelector('#email').value
+            
+            if(email){
+                const div = document.createElement('div');
+                div.className = 'mensagemError';
+                div.innerHTML = `<p>Email <b>${email}</b> cadastrado</p>`;
+                div.style.color = 'green';
+
+                const heroContent = document.querySelector('.hero-content');
+                heroContent.appendChild(div);
             }else{
-                topbar.parentElement.removeChild(topbar)
+                const div = document.createElement('div');
+                div.className = 'mensagemError';
+                div.innerHTML = `<p>cadastre um email primeiro!</p>`
+                div.style.color = 'red';
+                const elementoPai = document.querySelector('.hero-content');
+                elementoPai.appendChild(div)
             }
-        })()
+        }
     </script>
 </body>
 
