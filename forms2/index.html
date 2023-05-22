@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+</head>
+<body>
+
+        <form  id="pai">
+            <fieldset>
+              <legend>Fruit juice size</legend>
+              <p>
+                <input onclick = "modificar1()" type="radio" name="size" id="size_1" value="small" />
+                <label for="size_1">Small</label>
+              </p>
+              <p>
+                <input onclick="modificar2()" type="radio" name="size" id="size_2" value="medium" />
+                <label for="size_2">Medium</label>
+              </p>
+              <p>
+                <input onclick="modificar3()" type="radio" name="size" id="size_3" value="large" />
+                <label for="size_3">Large</label>
+              </p>
+            </fieldset>
+          </form>
+          <script>
+            function modificar1(){
+                const novoElemento = document.createElement('div');
+                novoElemento.className = 'small';
+                novoElemento.innerHTML = `<p> fonte pequena</p>`;
+                novoElemento.style.fontSize = '40px';
+
+                const elementoPai = document.querySelector('#pai');
+                elementoPai.appendChild(novoElemento);
+            }
+            function modificar2(){
+                const novoElemento = document.createElement('div');
+                novoElemento.className = 'small';
+                novoElemento.innerHTML = `<p> fonte pequena</p>`;
+                novoElemento.style.fontSize = '60px';
+
+                const elementoPai = document.querySelector('#pai');
+                elementoPai.appendChild(novoElemento);
+            }
+            function modificar3(){
+                const novoElemento = document.createElement('div');
+                novoElemento.className = 'small';
+                novoElemento.innerHTML = `<p> fonte pequena</p>`;
+                novoElemento.style.fontSize = '80px';
+
+                const elementoPai = document.querySelector('#pai');
+                elementoPai.appendChild(novoElemento);
+            }
+            
+          </script>
+</body>
+</html>
