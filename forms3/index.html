@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <section>
+            <h1>Payment form</h1>
+            <p>required fields  are followed by *.</p>
+        </section>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>title</legend>
+                <li>
+                    <input type="radio" name="king" id="king">
+                    <label for="king">King</label>
+                </li>
+                <li>
+                    <input type="radio" name="queen" id="queen">
+                    <label for="queen">Queen</label>
+                </li>
+                <li>
+                    <input type="radio" name="joker" id="joker">
+                    <label for="joker">Joker</label>
+                </li>
+            </fieldset>
+            <p>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome">
+            </p>
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+            </p>
+        </section>
+        <section>
+            <h1>Payment information</h1>
+            <label for="usedcard">Card type: </label>
+            <select name="card" id="usedcard">
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+            </select>
+            <p>
+                <label for="cardnumber">Card Number</label>
+                <input type="tel" name="tel" id="tel">
+            </p>
+        </section>
+    </form>
+</body>
+</html>

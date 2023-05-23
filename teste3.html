@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .estilo-div{
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <button class="btn">criar</button>
+    </div>
+    
+    <script>
+        const btn = document.querySelector('.btn');
+        btn.onClick = ()=>{
+            const estilizando = document.createElement('div');
+            // estilizando.className('.estilo-div');
+
+    
+            const elementoPai = document.querySelector('#conteiner');
+            // elementoPai.appendChild(estilizando);
+        }
+    </script>
+</body>
+</html>
